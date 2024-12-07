@@ -1,0 +1,208 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #e9eff1; 
+    margin: 0;
+    padding: 0;
+    color: #2d2d2d; 
+}
+
+header {
+    background: linear-gradient(135deg, #3a506b, #5bc0be);
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 2px solid #e0e6ed; 
+}
+
+.header-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.header-content p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+input, button {
+    padding: 12px;
+    border: 1px solid #ccd5e0;
+    border-radius: 25px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background: #f8fafc;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-label {
+    background-color: #5bc0be; 
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-file-label:hover {
+    background-color: #3a506b;
+    transform: translateY(-2px);
+}
+
+button {
+    background-color: #5bc0be; 
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3a506b; 
+    transform: translateY(-3px);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15); 
+}
+
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.03); 
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(58, 80, 107, 0.9);
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-content {
+    width: 50%; 
+    max-width: 600px; 
+    height: auto; 
+    border-radius: 10px;
+}
+
+.nav-btn {
+    background: linear-gradient(135deg, #5bc0be, #3a506b);
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 24px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn:hover {
+    background: linear-gradient(135deg, #3a506b, #5bc0be);
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.nav-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(91, 192, 190, 0.5);
+}
+
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.close:hover {
+    transform: rotate(90deg); 
+}
+
+#caption {
+    margin: 10px auto;
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.drop-zone {
+    border: 2px dashed #5bc0be;
+    border-radius: 15px;
+    text-align: center;
+    padding: 40px;
+    margin: 20px;
+    background-color: #f8fafc;
+    color: #2d2d2d;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.drop-zone.dragover {
+    background-color: #e0f7fa;
+    border-color: #3a506b;
+}
